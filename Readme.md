@@ -7,7 +7,7 @@
 
 ---
 
-<img width="600" alt="Melt example" src="https://github.com/xflowos/zit/zit-demo.gif">
+<img width="600" alt="Melt example" src="https://github.com/xflowos/zit/blob/main/zit-demo.gif">
 
 ---
 
