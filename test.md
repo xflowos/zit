@@ -7,10 +7,6 @@
 
 ---
 
-<img width="600" alt="Melt example" src="https://github.com/xflowos/zit/blob/main/zit-demo.gif">
-
----
-
 ## Standing on the Shoulders of Giants
 
 ZIT is built on battle-tested tools. We don't reinvent wheels.
