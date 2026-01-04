@@ -6,7 +6,6 @@
 
 ---
 <img width="600" alt="Melt example" src="https://github.com/xflowos/zit/blob/main/zit-demo.gif">
----
 
 ---
 ## Standing on the Shoulders of Giants
@@ -20,8 +19,9 @@ ZIT is built on battle-tested tools. We don't reinvent wheels.
 - **Rollback** – Instant recovery from bad state  
 
 **Without ZFS:** Core magic is lost for now. Portable backends (IPFS, S3, etc.) planned as alternative providers.
----
 
+
+---
 ### rsync and the MAVLink Ecosystem – Giants of Sync and Messaging
 Key tools we interoperate with:
 
