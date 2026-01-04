@@ -10,7 +10,7 @@
 ## Standing on the Shoulders of Giants
 ZIT is built on battle-tested tools. We don't reinvent wheels.
 
-### 1. [OpenZFS](https://openzfs.org) - Storage Foundation
+### [OpenZFS](https://openzfs.org) - Storage Foundation
 **What it is:** Production-grade filesystem with Copy-on-Write, snapshots, compression, and deduplication.  
 **Why ZIT uses it:**
 - **Snapshots** – Every commit/package version is a ZFS snapshot (instant, zero-copy)
@@ -19,45 +19,82 @@ ZIT is built on battle-tested tools. We don't reinvent wheels.
 
 **Without ZFS:** Core magic is lost for now. Portable backends (IPFS, S3, etc.) planned as alternative providers.
 
-### 2. rsync and the MAVLink Ecosystem - Giants of Sync and Messaging
-**Key tools we interoperate with:**
-- **[rsync](https://rsync.samba.org/)** – Legendary delta-transfer algorithm and tool
-- **[MAVLink Protocol](https://mavlink.io/)** – Lightweight hybrid pub/sub + point-to-point messaging standard
-- **[MAVProxy](https://ardupilot.org/mavproxy/)** & **[pymavlink](https://github.com/ArduPilot/pymavlink)** – Battle-tested ground station, proxy, and Python tools
+---
 
-**Giants behind them:**
-- **Andrew "Tridge" Tridgell (OAM)** – Creator/maintainer of rsync (with Paul Mackerras), Samba; creator and lead maintainer of MAVProxy; original author of pymavlink; ArduPilot lead developer (fixed-wing/VTOL)
-- **Lorenz Meier** – Creator of the MAVLink protocol (2009), PX4, Pixhawk, QGroundControl
+### rsync and the MAVLink Ecosystem – Giants of Sync and Messaging
+Key tools we interoperate with:
 
-**Why ZIT stands directly on these shoulders:**
-- zit-sync (planned v0.5.0) will use **full rsync compatibility** for efficient remote deltas
-- Direct interop with **MAVProxy/pymavlink** tools to leverage MAVLink’s hybrid pub/sub for lightweight metadata broadcasts, package announcements, and P2P coordination over TailScale
+rsync – Legendary delta-transfer algorithm and tool
+MAVLink Protocol – Lightweight hybrid pub/sub + point-to-point messaging standard
+MAVProxy & pymavlink – Battle-tested ground station, proxy, and Python tools
 
-Huge respect to Andrew "Tridge" Tridgell – true Aussie GNU/CCC-style hacker legend – and Lorenz Meier for these foundational, interoperable tools that have powered real-world systems for decades.
+Giants behind them:
 
-### 3. [Tailscale](https://tailscale.com) - The SDN Magic for P2P Distribution
-**What it is:** Zero-config, secure mesh VPN built on WireGuard – making any devices talk directly as if on the same LAN, anywhere.  
-**Founders/Hackers:** Avery Pennarun (CEO), David Crawshaw, David Carney – true networking wizards turning NAT hell into seamless connectivity.  
-**Why ZIT (and xFlowOS) loves it:**
-- zit-sync (v0.5.0+) uses Tailscale for **P2P distribution, team package caching, and secure remote sync** – nodes discover and connect directly, no port forwarding nightmares.
-- Enables distributed xFlowOS fleets to feel like one big local network.
-- **Critically:** Their **huge free tier** (3 users, 100 devices – perfect for personal/homelab/open-source projects) makes this accessible to all hackers without barriers.
+Andrew "Tridge" Tridgell (OAM) – Creator/maintainer of rsync (with Paul Mackerras), Samba; creator and lead maintainer of MAVProxy; original author of pymavlink; ArduPilot lead developer (fixed-wing/VTOL)
+Lorenz Meier – Creator of the MAVLink protocol (2009), PX4, Pixhawk, QGroundControl
 
-Massive props to the Tailscale team for building this game-changer and keeping a generous free plan alive. xFlowOS SDN wouldn't be the same without standing on these shoulders. 🤘
+Why ZIT stands directly on these shoulders:
 
-(Note: For fully self-hosted control server, the excellent community OSS [Headscale](https://github.com/juanfont/headscale) is compatible and recommended for larger/privacy-focused setups.)
+zit-sync (planned v0.5.0) uses full rsync compatibility for bandwidth-efficient remote deltas
+Direct interop with MAVProxy/pymavlink to leverage MAVLink’s proven hybrid pub/sub model for lightweight metadata broadcasts, package announcements, and P2P coordination over Tailscale meshes
+These tools existed long before xFlowOS. MAVLink, in particular, worked flawlessly for me in real-world, high-stakes environments where reliability was everything. There may be theoretically “better” protocols on paper, but none I trust more. Trust is the foundation.
 
-### 4. [Charm.sh](https://charm.sh) - Beautiful Terminal UIs
-**What it is:** Suite of tools for delightful terminal interfaces (Bubble Tea, Lip Gloss, Huh, Log).  
-**Why ZIT uses it:**
-- **Bubble Tea** – Interactive TUIs (progress bars, spinners, selection lists)
-- **Lip Gloss** – Styled output (colors, borders, layouts)
-- **Huh** – Beautiful forms and prompts
-- **Log** – Structured, pretty logging  
-
-**Without Charm:** ZIT would look like it’s from 1995 and be 10× harder to build.
+Huge respect to Andrew "Tridge" Tridgell – true Aussie GNU/CCC-style hacker legend – and Lorenz Meier for building these foundational, interoperable tools that have powered critical systems for decades. ZIT and zit-sync wouldn't be possible without them. 🇦🇺🇨🇭🤘
 
 ---
+
+### Tailscale - The SDN Magic for P2P Distribution
+What it is: Zero-config, secure mesh VPN built on WireGuard – making any devices talk directly as if on the same LAN, anywhere.
+Founders/Hackers: Avery Pennarun (CEO), David Crawshaw, David Carney – true networking wizards turning NAT hell into seamless connectivity.
+Why ZIT (and xFlowOS) loves it:
+
+zit-sync (v0.5.0+) uses Tailscale for P2P distribution, team package caching, and secure remote sync – nodes discover and connect directly, no port forwarding nightmares.
+ZIT is the datastore sitting directly on Tailscale meshes, enabling distributed xFlowOS fleets to feel like one big, intelligent local network.
+Critically: Their huge free tier (3 users, 100 devices – perfect for personal/homelab/open-source projects) makes this accessible to all hackers without barriers.
+
+Echoing Sun Microsystems legend Scott G. McNealy's iconic line: "The network is the computer."
+Tailscale makes that vision not just possible, but real, easy, and usable today – turning your entire distributed fleet into one cohesive, intelligent system.
+Massive props to the Tailscale team for building this game-changer and keeping a generous free plan alive. xFlowOS wouldn't be the same without standing on these shoulders. 🤘
+(Note: For fully self-hosted control server, the excellent community OSS Headscale is compatible and recommended for larger/privacy-focused setups.)
+
+"In xFlowOS, intelligence isn't centralized — it's distributed.
+ZIT stores the data. Tailscale connects the nodes.
+The network itself thinks, lives, and knows.
+But ultimately — you are the intelligence.
+We just connect your devices and let the fleet become an extension of your mind."
+
+"xFlowOS doesn't centralize intelligence — it distributes it.
+Every node thinks. The whole fleet knows."
+
+"xFlowOS turns your devices into a single distributed brain.
+The network doesn't just carry data — it thinks with it."
+
+---
+
+### [Charm.sh](https://charm.sh) - Beautiful Terminal UIs
+**What it is:** A suite of Go libraries that make building delightful, modern terminal applications feel effortless – Bubble Tea, Lip Gloss, Huh, Glamour, Log, and more.  
+
+**Key Innovators:**
+- **Chris Waldon** – Creator and lead maintainer of Bubble Tea (Elm-inspired TUI framework for Go), Lip Gloss, and the core Charm vision
+- **Maas Lalani** – Creator of Huh (beautiful, powerful forms/prompts), major contributor, and tutorial wizard
+- **bashbunni** – The charismatic YouTube/Twitch face of Charm TV – hosting epic demos, tutorials, and making the terminal glamorous for everyone
+- **Mike Harris** – Major contributor across the ecosystem
+- The entire Charm team and open-source contributors
+
+**Why ZIT stands directly on these shoulders (just like we do with MAVLink tools):**
+- **Bubble Tea** – Elm Architecture port to Go; enables reactive, state-managed TUIs (progress bars, spinners, selection lists, live diffs)
+- **Lip Gloss** – Declarative styling for colors, borders, layouts
+- **Huh** – Intuitive, accessible forms and interactive prompts (game-changer for user input)
+- **Log** – Structured, pretty logging
+
+Without Charm, ZIT’s interface would look like it’s from 1995 and be 10× harder to build.  
+
+Massive LOVE and respect to Chris Waldon for the foundational wizardry, Maas Lalani for Huh and killer tutorials, **bashbunni** for being the infectious Charm TV host that gets everyone hyped on glamorous CLIs (you're crushing it, legend ❤️ you made everything make sense for me peace & love), Mike Harris, and the whole Charm crew for bringing Elm-inspired elegance and pure joy to the terminal. True hacker artistry. ❤️
+
+**Without Charm:** ZIT would look like it’s from 1995 and be 100× harder to build.
+
+---
+
 ## What is ZIT?
 **ZIT is the datastore provider for xFlowOS.**  
 It manages:
