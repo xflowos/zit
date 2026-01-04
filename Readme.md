@@ -58,7 +58,8 @@ Critically: Their huge free tier (3 users, 100 devices – perfect for personal/
 
 Echoing Sun Microsystems legend Scott G. McNealy's iconic line: "The network is the computer."
 Tailscale makes that vision not just possible, but real, easy, and usable today – turning your entire distributed fleet into one cohesive, intelligent system.
-Massive props to the Tailscale team for building this game-changer and keeping a generous free plan alive. xFlowOS wouldn't be the same without standing on these shoulders. 🤘
+Massive props to the Tailscale team for building this game-changer and keeping a generous free plan alive. xFlowOS wouldn't be the same without tailscale.
+
 (Note: For fully self-hosted control server, the excellent community OSS Headscale is compatible and recommended for larger/privacy-focused setups.)
 
 "In xFlowOS, intelligence isn't centralized — it's distributed.
