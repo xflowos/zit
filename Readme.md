@@ -1,8 +1,12 @@
 # ZIT - Zetabyte Information Tracker
+⚠️ Work in Progress
+
 **Version:** 0.3.0  
-**Purpose:** Line-granular version control and package management for xFlowOS  
+**Purpose:** DataStore for xFlowOS  
 **License:** GPL-3.0  
-**Author:** Shaun Lloyd (0@xflowos.au)
+**Author:** Shaun Lloyd  
+**Email:** 0@xflowos.au  
+Part of the **xFlowOS ecosystem**.
 
 ---
 <img width="600" alt="Melt example" src="https://github.com/xflowos/zit/blob/main/zit-demo.gif">
@@ -42,7 +46,7 @@ These tools existed long before xFlowOS. MAVLink, in particular, worked flawless
 
 Huge respect to Andrew "Tridge" Tridgell – true Aussie GNU/CCC-style hacker legend – and Lorenz Meier for building these foundational, interoperable tools that have powered critical systems for decades. ZIT and zit-sync wouldn't be possible without them. 🇦🇺🇨🇭🤘
 
-
+---
 ### Tailscale - The SDN Magic for P2P Distribution
 What it is: Zero-config, secure mesh VPN built on WireGuard – making any devices talk directly as if on the same LAN, anywhere.
 Founders/Hackers: Avery Pennarun (CEO), David Crawshaw, David Carney – true networking wizards turning NAT hell into seamless connectivity.
@@ -70,7 +74,6 @@ Every node thinks. The whole fleet knows."
 The network doesn't just carry data — it thinks with it."
 
 ---
-
 ### [Charm.sh](https://charm.sh) - Beautiful Terminal UIs
 **What it is:** A suite of Go libraries that make building delightful, modern terminal applications feel effortless – Bubble Tea, Lip Gloss, Huh, Glamour, Log, and more.  
 
@@ -94,7 +97,6 @@ Massive LOVE and respect to Chris Waldon for the foundational wizardry, Maas Lal
 **Without Charm:** ZIT would look like it’s from 1995 and be 100× harder to build.
 
 ---
-
 ## What is ZIT?
 **ZIT is the datastore provider for xFlowOS.**  
 It manages:
@@ -160,20 +162,13 @@ Installation and usage instructions describe the planned architecture. PRs very 
 ---
 ## Credits
 **Standing on the shoulders of:**
-1. **[OpenZFS](https://openzfs.org)** – The foundation (snapshots, clones, dedup, compression)
-2. **Andrew "Tridge" Tridgell** & **Lorenz Meier** – rsync, MAVProxy, pymavlink, MAVLink protocol
-3. **Tailscale Team** (Avery Pennarun, David Crawshaw, David Carney) – Secure mesh networking magic
-4. **[Charm](https://charm.sh)** – Beautiful terminal UIs (Bubble Tea, Lip Gloss, Huh, Log)
-- [BLAKE3](https://github.com/BLAKE3-team/BLAKE3) – Fast, secure hashing
+- **[OpenZFS](https://openzfs.org)** – The foundation (snapshots, clones, dedup, compression)
+- **Andrew "Tridge" Tridgell** & **Lorenz Meier** – rsync, MAVProxy, pymavlink, MAVLink protocol
+- **Tailscale Team** (Avery Pennarun, David Crawshaw, David Carney) – Secure mesh networking magic
+- **[Charm](https://charm.sh)** – Beautiful terminal UIs (Bubble Tea, Lip Gloss, Huh, Log)
+- **[BLAKE3](https://github.com/BLAKE3-team/BLAKE3)** – Fast, secure hashing
 
 **ZIT exists because these tools are excellent.**
-
----
-## Author
-**Shaun Lloyd**  
-Email: 0@xflowos.au  
-Web: https://xflowos.au  
-Part of the **xFlowOS ecosystem**.
 
 ---
 ## Next Steps
@@ -186,7 +181,10 @@ I'm just one hacker (actually a chef, not even a pro dev)! Priorities:
 - [ ] Test suite
 - [ ] Real-world production failure → recovery → stability testing  
 
-(This is a single-hacker WIP. Storing data in xFlowOS is no joke – real incidents, metrics, and battle-testing required.)
+*(This is a single-hacker WIP. Storing data in xFlowOS is no joke – real incidents, metrics, and battle-testing required.)*
+
+- LAST THING !
+- BUGS, ERRORS, ... 100% 0@xflowos.au attributable NOT linux, openzfs, rsync, mavlink, charm.sh: et all ! 
 
 **Want to learn more about xFlowOS?**  
 https://xflowos.au
