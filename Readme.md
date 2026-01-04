@@ -2,7 +2,7 @@
 
 **Version:** 0.2.0  
 **Purpose:** Line-granular version control and package management for xFlowOS  
-**License:** GPL-3.0 (Commercial licensing available)  
+**License:** GPL-3.0
 **Author:** Shaun Lloyd (0@xflowos.au)
 
 ---
