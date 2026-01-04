@@ -7,6 +7,8 @@
 ---
 <img width="600" alt="Melt example" src="https://github.com/xflowos/zit/blob/main/zit-demo.gif">
 ---
+
+---
 ## Standing on the Shoulders of Giants
 ZIT is built on battle-tested tools. We don't reinvent wheels.
 
@@ -18,7 +20,6 @@ ZIT is built on battle-tested tools. We don't reinvent wheels.
 - **Rollback** – Instant recovery from bad state  
 
 **Without ZFS:** Core magic is lost for now. Portable backends (IPFS, S3, etc.) planned as alternative providers.
-
 ---
 
 ### rsync and the MAVLink Ecosystem – Giants of Sync and Messaging
@@ -41,7 +42,6 @@ These tools existed long before xFlowOS. MAVLink, in particular, worked flawless
 
 Huge respect to Andrew "Tridge" Tridgell – true Aussie GNU/CCC-style hacker legend – and Lorenz Meier for building these foundational, interoperable tools that have powered critical systems for decades. ZIT and zit-sync wouldn't be possible without them. 🇦🇺🇨🇭🤘
 
----
 
 ### Tailscale - The SDN Magic for P2P Distribution
 What it is: Zero-config, secure mesh VPN built on WireGuard – making any devices talk directly as if on the same LAN, anywhere.
