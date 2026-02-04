@@ -1,16 +1,23 @@
 # ZIT - Zetabyte Information Tracker
 
+---
+
 Version: 0.3.0  
-Purpose: Line-granular version control and package management for xFlowOS  
 License: GPL-3.0
 Author: Shaun Lloyd
 Email: 0@xflowos.au  
 
+---
+
 <img width="600" alt="Melt example" src="https://github.com/xflowos/zit/blob/main/zit-demo.gif">
+
+---
+
 
 # About
 
 ZFS filesystem with Copy-on-Write, snapshots, compression, and deduplication.
+
 
 ## Stack
 
