@@ -14,7 +14,8 @@ ZFS filesystem with Copy-on-Write, snapshots, compression, and deduplication.
 
 ## Stack
 
-| Giant | Website | Description | 
+| Giant | Website | Description |
+| ----- | ------- | ----------- |
 | OpenZFS | (https://openzfs.org) | The foundation (snapshots, clones, dedup, compression) |
 | Charm | (https://charm.sh) | Beautiful terminal UIs (Bubble Tea, Lip Gloss, Huh, Log) |
 | SQLite | (https://sqlite.org) | Metadata and indexing |
@@ -24,6 +25,7 @@ ZFS filesystem with Copy-on-Write, snapshots, compression, and deduplication.
 ## Pipeline
 
 | Stage | Description |
+| ----- | ----------- |
 | Ingest | Files split chunk, lines, of entire file, each BLAKE3 hashed. |
 | Dedup | Identical Hash stored as reference |
 | Store | Unique lines stored once in SQLite |
@@ -39,6 +41,7 @@ ZFS filesystem with Copy-on-Write, snapshots, compression, and deduplication.
 ## 1.[OpenZFS](https://openzfs.org) - Storage Foundation
 
 | Feature | Description |
+| ------- | ----------- |
 | Snapshots | Every commit package version is a ZFS snapshot (instant, zero-copy) |
 | Clones | Writable branches without duplicating data (Copy-on-Write) |
 | Compression |  60-80% space savings on text (transparent) |
@@ -50,6 +53,7 @@ ZFS filesystem with Copy-on-Write, snapshots, compression, and deduplication.
 Charmed UI, and i could never have learned golang without the charmed maps. Love.
 
 | Charm | Description |
+| ----- | ----------- |
 | Bubble Tea | Interactive TUIs (progress bars, spinners, selection lists) |
 | Lip Gloss | Styled output (colors, borders, layouts) |
 | Huh | Beautiful forms and prompts | 
